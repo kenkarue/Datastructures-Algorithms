@@ -4,7 +4,7 @@ import SharedClasses.Tree;
 import java.util.Stack;
 
 /**
- *  BST Inorder:: LEFT ROOT RIGHT
+ *  Inorder:: LEFT ROOT RIGHT
  *   Input::
  *      Tree:          20
  *                   /     \
