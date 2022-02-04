@@ -4,13 +4,13 @@ import SharedClasses.Tree;
 import java.util.Stack;
 
 /**
- *  Post-order:: LEFT RIGHT ROOT
- *  Input::
+ *  Pre-order:: ROOT LEFT RIGHT
+ *   Input::
  *      Tree:          20
  *                   /     \
  *                 10       30
  *
- *  OutPut::
+ *   OutPut::
  *      List:: 20, 10, 30
  */
 public class PreOrderTraversal {
