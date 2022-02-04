@@ -1,17 +1,16 @@
 package DSBinaryTrees;
 
 import SharedClasses.Tree;
-
 import java.util.Stack;
 
 /**
- *  Pre-order:: ROOT LEFT RIGHT
- *   Input::
+ *  Post-order:: LEFT RIGHT ROOT
+ *  Input::
  *      Tree:          20
  *                   /     \
  *                 10       30
  *
- *   OutPut::
+ *  OutPut::
  *      List:: 20, 10, 30
  */
 public class PreOrderTraversal {
