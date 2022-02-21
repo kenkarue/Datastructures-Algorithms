@@ -6,7 +6,7 @@ package DSArrays;
  *   target - value being searched
  *
  *  Output:
- *    int - index of the value
+ *    int - index of the value in the array
  */
 public class SearchTarget {
 
