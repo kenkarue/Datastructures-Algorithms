@@ -14,7 +14,7 @@ public class Graph {
     Map<String, Node> nodes = new HashMap<>();
     Map<Node, List<Node>> adjList = new HashMap<>();
 
-    class Node {
+    public class Node {
         String label;
         Node(String label){
             this.label = label;
@@ -77,6 +77,14 @@ public class Graph {
             List<Node> adj = (List) elements.getValue();
             System.out.println(key.label+ " is connected to "+adj.toString());
         }
+    }
+
+    public Map<Node, List<Node>> getAdjList() {
+        return adjList;
+    }
+
+    public Map<String, Node> getNodes() {
+        return nodes;
     }
 
     public static void main(String[] args){
