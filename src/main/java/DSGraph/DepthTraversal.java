@@ -52,8 +52,10 @@ public class DepthTraversal {
                 continue;
             }
             List<Node> l = adjList.get(current);
-            for(Node i: l)
-                s.push(i);
+            for(Node i: l){
+                if(!visited.contains(i.label))
+                    s.push(i);
+            }
             System.out.print(" "+current.label);
             visited.add(current.label);
         }
