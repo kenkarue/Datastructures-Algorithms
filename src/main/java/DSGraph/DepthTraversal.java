@@ -1,8 +1,6 @@
 package DSGraph;
 
 import DSGraph.Graph.Node;
-import netscape.security.UserTarget;
-
 import java.util.*;
 
 /**
