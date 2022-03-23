@@ -24,6 +24,11 @@ public class MergeTwoSortedLists {
         Node l21 = new Node(1, new Node(3, new Node(4, null)));
         Node merged11 = merge(l11, l21);
         Node.print(merged11);
+        // scenario 3
+        Node l111 = null;
+        Node l211 = new Node(1, new Node(3, new Node(4, null)));
+        Node merged111 = merge(l111, l211);
+        Node.print(merged111);
     }
 
 
