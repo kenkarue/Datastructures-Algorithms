@@ -12,7 +12,12 @@ public class Node {
     public Node() {
     }
 
-    public void print(Node head){
+    public Node(int value, Node next) {
+        this.value = value;
+        this.next = next;
+    }
+
+    public static void print(Node head){
         Node current = head.next;
         System.out.print(head.value);
         while(current != null){
