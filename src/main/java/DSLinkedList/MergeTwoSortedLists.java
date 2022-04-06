@@ -47,17 +47,11 @@ public class MergeTwoSortedLists {
             merged.next = temp;
             merged = temp;
         }
-        while(l1 != null){
-            Node temp = new Node(l1.value, null);
-            l1 = l1.next;
-            merged.next = temp;
-            merged = temp;
+        if(l1 != null){
+            merged.next = l1;
         }
-        while(l2 != null){
-            Node temp = new Node(l2.value, null);
-            l2 = l2.next;
-            merged.next = temp;
-            merged = temp;
+        if(l2 != null){
+            merged.next = l2;
         }
         return dummy.next;
     }
