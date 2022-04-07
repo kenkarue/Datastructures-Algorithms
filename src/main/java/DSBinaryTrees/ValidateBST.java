@@ -55,9 +55,7 @@ public class ValidateBST {
                 return false;
             }
             least = temp.val;
-            if(temp.right != null){
-                node = temp.right;
-            }
+            node = temp.right;
         }
         return true;
     }
