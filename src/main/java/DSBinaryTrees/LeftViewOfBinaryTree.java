@@ -24,7 +24,7 @@ public class LeftViewOfBinaryTree {
         root.right.right.right = new Tree(40);
 
         List<Integer> leftView =  new ArrayList<>();
-        leftView = iterative(root);
+        // leftView = iterative(root);
         recursive(root, 1, leftView);
         print(leftView);
     }
@@ -33,15 +33,18 @@ public class LeftViewOfBinaryTree {
         if(root == null){
             return;
         }
+        recursive(root.left, level + 1, leftView);
         if(maxLevel < level){
             leftView.add(root.val);
             maxLevel = level;
         }
-        recursive(root.left, level + 1, leftView);
         recursive(root.right, level + 1, leftView);
     }
 
     private static List<Integer> iterative(Tree root){
+        if(root == null){
+            return new ArrayList<>();
+        }
         List<Integer> leftView = new ArrayList<>();
         Queue<Tree> q = new LinkedList<>();
         q.add(root);
