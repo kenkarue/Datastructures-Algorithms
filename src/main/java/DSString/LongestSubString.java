@@ -8,6 +8,9 @@ import java.util.Map;
  *    String: clementisacap
  * Output:
  *    String: mentisac
+ *
+ *    Time: 0(n)
+ *    Space: 0(n)
  */
 public class LongestSubString {
 
