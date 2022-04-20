@@ -8,25 +8,31 @@ import static sun.misc.Version.print;
 
 public class Weighted {
 
-    static Map<String, Node> nodes = new HashMap<>();
-    static Map<Node, List<Edge>> adjList = new HashMap<>();
+    public static Map<String, Node> nodes = new HashMap<>();
+    public static Map<Node, List<Edge>> adjList = new HashMap<>();
 
     public static void main(String[] args){
         Weighted weighedGraph = new Weighted();
         // add nodes
-        weighedGraph.addNode("Kenya");
-        weighedGraph.addNode("Uganda");
-        weighedGraph.addNode("Tanzania");
+        weighedGraph.addNode("A");
+        weighedGraph.addNode("B");
+        weighedGraph.addNode("C");
+        weighedGraph.addNode("D");
+        weighedGraph.addNode("E");
 
         // add vertices
-        weighedGraph.addEdge("Kenya", "Uganda", 30);
-        weighedGraph.addEdge("Kenya", "Tanzania", 20);
-        weighedGraph.addEdge("Tanzania", "Uganda", 10);
+        weighedGraph.addEdge("A", "B", 1);
+        weighedGraph.addEdge("A", "C", 4);
+        weighedGraph.addEdge("A", "D", 3);
+
+        weighedGraph.addEdge("C", "D", 2);
+        weighedGraph.addEdge("B", "E", 7);
+        weighedGraph.addEdge("D", "E", 3);
 
         print();
     }
 
-    private static void addNode(String label){
+    public static void addNode(String label){
         if(nodes.containsKey(label)){
            return;
         }
@@ -35,7 +41,7 @@ public class Weighted {
         adjList.putIfAbsent(newNode, new ArrayList<>());
     }
 
-    private static void addEdge(String from, String to, int weight){
+    public static void addEdge(String from, String to, int weight){
         if(!nodes.containsKey(from)){
             throw new IllegalArgumentException("Vertice "+ from +" does not exist");
         }
@@ -50,6 +56,14 @@ public class Weighted {
 
         adjList.get(fromNode).add(fromEdge);
         adjList.get(toNode).add(toEdge);
+    }
+
+    public static Map<Node, List<Edge>> getAdjList(){
+        return adjList;
+    }
+
+    public static Map<String, Node> getNodes(){
+        return nodes;
     }
 
     private static void print(){
