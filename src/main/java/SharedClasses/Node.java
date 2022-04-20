@@ -4,9 +4,14 @@ public class Node {
     public int value;
     public Node prev;
     public Node next;
+    public String label;
 
     public Node(int value) {
         this.value = value;
+    }
+
+    public Node(String label) {
+        this.label = label;
     }
 
     public Node() {
