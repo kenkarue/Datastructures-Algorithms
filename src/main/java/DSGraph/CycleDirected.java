@@ -33,8 +33,8 @@ public class CycleDirected {
         all.addAll(nodes.values());
         while(!all.isEmpty()){
             Node current = all.iterator().next();
-            boolean cycle = hasCycle(current, all, visiting, visited);
-            if(cycle){
+            boolean hasCycle = hasCycle(current, all, visiting, visited);
+            if(hasCycle){
                 return true;
             }
         }
@@ -44,19 +44,20 @@ public class CycleDirected {
     private static boolean hasCycle(Node current, Set<Node> all, Set<Node> visiting, Set<Node> visited) {
         all.remove(current);
         visiting.add(current);
-        for(Node temp: adjList.get(current)){
-            if(visited.contains(temp)){
-                continue;
-            }
-            if(visiting.contains(temp)){
-                return true;
-            }
-            if(hasCycle(temp, all, visiting, visited)){
-                return true;
-            }
+        for(Node currentNode : adjList.get(current)){
+           if(visited.contains(currentNode)){
+              continue;
+           }
+           if(visiting.contains(currentNode)){
+               return true;
+           }
+           if(hasCycle(currentNode, all, visiting, visited)){
+               return true;
+           }
         }
         visiting.remove(current);
         visited.add(current);
+
         return false;
     }
 }
