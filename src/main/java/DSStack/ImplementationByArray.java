@@ -1,5 +1,10 @@
 package DSStack;
 
+/**
+ * Stack Implementation using Array
+ * Time: 0(n)
+ * Space: 0(1) not including the stack array
+ */
 public class ImplementationByArray {
 
     static int top = -1;
