@@ -17,7 +17,7 @@ public class FullBinaryTree {
         head.right.left = new Tree(25);
         head.right.right = new Tree(35);
         head.right.left.left = new Tree(23);
-        head.right.right.right = new Tree(40);
+        head.right.left.right = new Tree(40);
 
         boolean isFullBinary = solution(head);
         System.out.println("Is Full Binary :: "+isFullBinary);
